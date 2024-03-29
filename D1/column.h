@@ -1,7 +1,7 @@
 typedef struct {
     char *title;
     int *date;
-    int sizr
+    int size;
 }column;
 COLUMN *create_column(char *title);
 
