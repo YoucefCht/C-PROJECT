@@ -24,6 +24,19 @@ COLUMN *create_column(char *title) {
 
 }
 
+int insert_value(COLUMN *col, int value) {
+    if (col->LogSize == col->PhySize) {
+        col->PhySize *= 2;
+        int *new_data = (int *)realloc(col->data, sizeof(int) * col->PhySize);
+        if (new_data == NULL) {
+            return 0;
+        }
+        col->data = new_data;
+    }
+    col->data[col->LogSize] = value;
+    col->LogSize++;
+    return 1;
+}
 
 
 
