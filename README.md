@@ -1,13 +1,4 @@
-  EEEEE   FFFFF   RRRR    EEEEE   III
-  
-  E       F       R   R   E        I 
-  
-  EEEE    FFFF    RRRR    EEEE     I 
-  
-  E       F       R  R    E        I 
-  
-  EEEEE   F       R   R   EEEEE   III
-  
+Made in Efrei
 
 By Loris Cacciottolo & Youcef Cheriet
 
