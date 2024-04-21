@@ -46,3 +46,11 @@ void delete_column(COLUMN **col) {
     }
 }
 
+void print_col(COLUMN *col) {
+    printf("Data in the COLUMN:\n");
+    for (int i = 0; i < col->logical_size; i++) {
+        printf("\n[%d] %d ",i ,col->data[i]);
+    }
+    printf("\n");
+}
+
