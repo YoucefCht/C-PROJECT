@@ -10,7 +10,7 @@ typedef struct {
 }COLUMN;
 
 COLUMN *create_column(char *title) {
-    COLUMN *column = (COLUMN*) malloc(sizeof(COLUMN));
+    COLUMN *column = (COLUMN *) malloc(sizeof(COLUMN));
     if (column == NULL) {
         printf("Impossible to allocate memory for the column \n");
         return NULL;
@@ -21,7 +21,6 @@ COLUMN *create_column(char *title) {
     column->LogSize = 0;
 
     return column;
-
 }
 
 int insert_value(COLUMN *col, int value) {
@@ -38,5 +37,12 @@ int insert_value(COLUMN *col, int value) {
     return 1;
 }
 
-
+void delete_column(COLUMN **col) {
+    if(*col != NULL && col != NULL){
+        free(*col);
+        free((*col)->title);
+        free((*col)->data);
+        *col = NULL;
+    }
+}
 

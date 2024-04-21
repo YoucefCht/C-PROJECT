@@ -1,5 +1,4 @@
-#include "column.h"
-
+#include "column/column.h"
 #define REALOC_SIZE 256
 
 int main() {
@@ -9,5 +8,6 @@ int main() {
         printf("Value added successfully to my column\n");
     else
         printf("Error adding value to my column\n");
-    
+
+return 0;
 }
