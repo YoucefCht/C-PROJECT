@@ -71,3 +71,32 @@ int return_value(COLUMN *col, int x){
     }
     return col -> data[x];
 }
+
+int ValGreater(COLUMN *col, int x){
+    int count = 0;
+    for(int i =0; i < col-> LogSize;i++){
+        if(col->data[i] > x){
+            count++;
+        }
+    }
+    return count;
+}
+int ValLess(COLUMN *col, int x){
+    int count = 0;
+    for(int i = 0; i < col->LogSize;i++){
+        if(col->data[i] < x){
+            count++;
+        }
+    }
+    return count;
+}
+int ValEqual(COLUMN *col, int x){
+    int count = 0;
+    for (int i = 0; i < col->LogSize; i++) {
+        if (col->data[i] == x){
+            count++;
+        }
+    }
+    return count;
+}
+
