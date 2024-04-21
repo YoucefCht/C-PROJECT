@@ -16,6 +16,13 @@ int main() {
     print_col(mycol);
 
 
+    int value= 10;
+    int occurrences = count_occurrences(mycol, value);
+    printf("Number of occurrences of %d: %d\n", value, occurrences);
+
+    int Value_to_get = return_value(mycol, 0);
+    printf("The first value is : %d\n", Value_to_get);
+
 
 return 0;
 }

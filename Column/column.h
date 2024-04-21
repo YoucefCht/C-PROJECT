@@ -48,9 +48,26 @@ void delete_column(COLUMN **col) {
 
 void print_col(COLUMN *col) {
     printf("Data in the COLUMN:\n");
-    for (int i = 0; i < col->logical_size; i++) {
+    for (int i = 0; i < col->LogSize; i++) {
         printf("\n[%d] %d ",i ,col->data[i]);
     }
     printf("\n");
 }
 
+int count_occurrences(const COLUMN *col, int x) {
+    int count = 0;
+    for (int i = 0; i < col->LogSize; i++) {
+        if (col->data[i] == x) {
+            count++;
+        }
+    }
+    return count;
+}
+
+
+int return_value(COLUMN *col, int x){
+    if (x < 0 || x >= col->LogSize) {
+        return 0;
+    }
+    return col -> data[x];
+}
