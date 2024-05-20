@@ -1,7 +1,6 @@
 #ifndef CDATAFRAME_H
 #define CDATAFRAME_H
-#include "Column.h"
-
+#include "column.h"
 
 typedef struct {
     COLUMN **columns;
